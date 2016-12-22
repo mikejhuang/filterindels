@@ -1,6 +1,6 @@
 ---
 title: A Comparison of Filters for Reducing False Positive Indels in Low Complexity
-  Regions
+  Regions Regions
 author: "Mike Huang"
 output: pdf_document
 fig_caption: yes
@@ -79,10 +79,10 @@ draw.triple.venn(area1 = 8252, area2 = 4460, area3 = 50801082, n12 = 4460, n23 =
 |$dbSNP \cap Trio \setminus LCR$|2590|
 
 
-|   |TP|FP|Precision|
-|---|--|--|---------|
-|Before LCR filter|4073|4179|4073/8252(49%)|
-|After LCR filter|2590|1202|2590/3792(68%)|
+|   |TP|FP|Precision|Sensitivity|
+|---|--|--|---------|-----------|
+|Before LCR filter|4073|4179|4073/8252(49%)|4073/4073(100%)|
+|After LCR filter|2590|1202|2590/3792(68%)|2590/4073(63%)|
 
 $Precision = \frac{TP}{TP+FP}$
 
@@ -106,10 +106,10 @@ draw.triple.venn(area1 = 8252, area2 = 4460, area3 = 60706, n12 = 4460, n23 = 69
 |$ExAC \cap Trio \setminus LCR$|1140|
 
 
-|   |TP|FP|Precision|
-|---|--|--|---------|
-|Before LCR filter|1209|7043|1209/8252(15%)|
-|After LCR filter|1140|2652|1140/3792(30%)|
+|   |TP|FP|Precision|Sensitivty|
+|---|--|--|---------|----------|
+|Before LCR filter|1209|7043|1209/8252(15%)|1209/1209(100%)|
+|After LCR filter|1140|2652|1140/3792(30%)|1140/1209(94%)|
 
 69/4460(1.5%) of indels in LCR regions are found in ExAC vs 1140/3792(30%) of indels in non-LCR regions are found in ExAC. Thus, if ExAC was considered the gold standard, LCR filters very few TP at 1.5% while doubling the precision from 15% to 30%. 
 
